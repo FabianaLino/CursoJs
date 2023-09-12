@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                font: normal 20px Arial;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var nome = window.prompt("Qual seu nome?");
+            document.write(
+                `Olá, <strong>${nome}</strong>! seu nome tem ${nome.length} letras.<br/>`
+            );
+            document.write(
+                `Seu nome em letras maiúsculas fica assim: ${nome.toUpperCase()}<br/>`
+            );
+            document.write(
+                ` Seu nome em letras minúsculas fica assim: ${nome.toLowerCase()}`
+            );
+
+            /* Já para formatarmos números usamos a seguinte forma:
+            var n1 = 1543.5
+            n1 vai retornar o valor exatamente como foi declarado na variável
+            n1.toFixed(2) o comando .toFixed(2) vai retornar com as 2 últimas casas decimais depois do (.)
+            E caso você queira trocar o . por , você deve acrescentar ao comando .replace('.', ',')
+            Também é possível retornar a variavél n1 como um valor de uma local específico como o Brasil, como o seguite comando:
+            n1.toLocalString('pt-BR', {style: 'currency', currency: 'BRL'})
+        </script>
+    </body>
+</html>

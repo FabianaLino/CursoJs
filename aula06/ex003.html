@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Primeiro programa JS do zero</title>
+        <style>
+            /*Comentário em CSS*/
+            body {
+                background-color: rgb(136, 231, 231);
+                color: white;
+                font: 20px Arial;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Comentário em HTML-->
+        <h1>Olá, mundo!</h1>
+        <p>Aprendendo JS do zero.</p>
+        <script>
+            var n1 = Number(window.prompt("Digite um número:")); //O comando prompt devolve sempre em formato string.
+            // Quando eu coloco o comando Number.parseInt, estou dizendo ao JS que é para converter o prompt como um número inteiro.
+            var n2 = Number(window.prompt("Digite outro número:")); // Quando eu coloco o comando Number.parseFloat, estou dizendo ao JS que é para converter o promt como um número com ponto, um número "quebrado".
+            // Na versão mais atual do JS eu posso usar apenas o comando Number(n) e o JS já vai converter para numero inteiro ou real, mas isso não elimina os outros 2 comandos, pois em alguns caso pode ser necesário usar apenas parseInt(n) ou o parseFloat(n)
+            // Já a conversão de número para string é possível através dos comandos String(n) ou n.toString()
+            var s = n1 + n2;
+            window.alert("A soma dos valores é:" + s); //+s está concatenando a variavel (var s)
+            // Também posso usar o formato mais atual do ECMAScript da seguinte forma:
+            window.alert(`A soma entre ${n1} e ${n2} é igual a ${s} `); // Esse comando ${} chama-se tempalte string.
+            // JS entende + para adição e também JS entende + para concatenação
+            // (number + number) para adição
+            // (string + string) para concatenação
+
+            /* Exemplo: 
+            var s = 'JavaScript'
+            'Eu estou aprendendo s'      desta forma não faz interpolação
+            'Eu estou aprendendo' + s    desta forma usa concatenação
+            ` Eu estou aprendendo ${s}`  desta forma usa template string 
+            s.length   desta forma me diz qual o tamanho da string, quantas letras ela tem 
+            s.toUperCase()  retornar tudo com letras 'MAIÚSCULAS'
+            s.toLowerCase() retornar tudo com letras 'minúculas' */
+        </script>
+    </body>
+</html>
